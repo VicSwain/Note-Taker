@@ -4,6 +4,9 @@ const { readFromFile, readAndAppend } = require('../helpers/fsUtils');
 // helper function to generate unique ids
 const uuid = require('../helpers/uuid');
 
+
+
+
 notes.get('/', (req, res) => {
     readFromFile('./db.json').then((data) => res.json(JSON.parse(data)));
 });
