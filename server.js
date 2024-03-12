@@ -7,6 +7,7 @@ const app = express();
 
 // middleware for parsing JSON and urlencoded data
 app.use(express.json());
+// middleware used to accept form data
 app.use(express.urlencoded({ extended : true }));
 // middleware to serve up static assets from the public folder
 app.use(express.static('public'));
