@@ -1,5 +1,5 @@
 const notes = require('express').Router();
-const { readFromFile, readAndAppend } = require('../helpers/fsUtils');
+const { readFromFile, readAndAppend, writeToFile } = require('../helpers/fsUtils');
 // helper function to generate unique ids
 const uuid = require('../helpers/uuid');
 
@@ -9,9 +9,26 @@ notes.get('/', (req, res) => {
 
 notes.get('/:id', (req,res) => {
     const requestedNote = req.params.id;
-    console.log(requestedNote);
-}
-);
+    readFromFile('./db/db.json')
+    .then((data) => JSON.parse(data))
+    .then((json) => {
+      const idReturn = json.filter((note) => note.note_id === requestedNote);
+      return idReturn.length > 0 ? res.json(idReturn) : res.json("No note with that id, try again.");
+    })
+    .catch((err) => console.error('Error in pulling note: ', err));
+});
+
+notes.delete('/:id', (req, res) => {
+    const deleteRequest = req.params.id;
+    readFromFile('./db/db.json')
+    .then((data) => JSON.parse(data))
+    .then((json) => {
+        const idReturn = json.filter((note) => note.note_id !== deleteRequest);
+        writeToFile('./db/db.json', idReturn)
+        res.json(`Note ${note_id} has been deleted`)
+    })
+    .catch((err) => console.error('Error deleting note: ', err));
+});
 
 
 
