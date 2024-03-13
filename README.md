@@ -1,27 +1,39 @@
-# Note Taker Starter Code
+  # Note Taker
 
+  ## Description
+  This is a full stack note taker app using node.js and ExpressJS. The user will be directed from the landing page to the notes page, and from there be able to input a new note with title, text, and the ability to save the note. From there the saved notes will show in the left hand column with the ability to click on them, to bring them back up, as well as delete them. 
 
-## User Story
-AS A small business owner
-I WANT to be able to write and save notes
-SO THAT I can organize my thoughts and keep track of tasks I need to complete
+  ## Table of Contents
+  [Installation](#installation)
 
-## Acceptance Criteria
-GIVEN a note-taking application
-WHEN I open the Note Taker
-THEN I am presented with a landing page with a link to a notes page
+  [Usage](#usage)
 
-WHEN I click on the link to the notes page
-THEN I am presented with a page with existing notes listed in the left-hand column, plus empty fields to enter a new note title and the note’s text in the right-hand column
+  [License](#license)
 
-WHEN I enter a new note title and the note’s text
-THEN a "Save Note" button and a "Clear Form" button appear in the navigation at the top of the page
+  [Contributors](#contributors)
 
-WHEN I click on the Save button
-THEN the new note I have entered is saved and appears in the left-hand column with the other existing notes and the buttons in the navigation disappear
+  [Tests](#tests)
 
-WHEN I click on an existing note in the list in the left-hand column
-THEN that note appears in the right-hand column and a "New Note" button appears in the navigation
+  [Questions](#questions)
 
-WHEN I click on the "New Note" button in the navigation at the top of the page
-THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column and the button disappears
+  ## Contributors
+  Maury Hughes 
+  
+  ## Questions
+  [GIT AT ME!](https://github.com/VicSwain)
+
+  [REACH OUT](@huracanmusic2016@gmail.com)
+
+  ## Usage
+  [Check it out!](https://note-taker-la50.onrender.com/)
+  
+  ### Installation
+  N/A
+
+  ### License 
+  No license
+  
+  ## Tests
+  N/A
+
+  
