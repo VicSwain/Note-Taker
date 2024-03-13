@@ -25,7 +25,7 @@ notes.delete('/:id', (req, res) => {
     .then((json) => {
         const idReturn = json.filter((note) => note.note_id !== deleteRequest);
         writeToFile('./db/db.json', idReturn)
-        res.json(`Note ${note_id} has been deleted`)
+        res.json(`Note ${idReturn} has been deleted`)
     })
     .catch((err) => console.error('Error deleting note: ', err));
 });

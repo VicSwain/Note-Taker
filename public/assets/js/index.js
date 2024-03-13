@@ -93,11 +93,11 @@ const handleNoteDelete = (e) => {
   activeNote = JSON.parse(temp)
   // const noteId = JSON.parse(note.parentElement.getAttribute('data-note')).id;
   // console.log(noteId);
-  if (activeNote.note_id === noteId) {
+  if (activeNote.note_id === note) {
     activeNote = {};
   }
 
-  deleteNote(noteId).then(() => {
+  deleteNote(activeNote.note_id).then(() => {
     getAndRenderNotes();
     renderActiveNote();
   });

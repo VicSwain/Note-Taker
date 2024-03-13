@@ -2,20 +2,5 @@
     {
         "title": "Test Title",
         "text": "Test text"
-    },
-    {
-        "title": "The dog",
-        "text": "Ran\n",
-        "note_id": "fe5d"
-    },
-    {
-        "title": "Code",
-        "text": "Practice\n",
-        "note_id": "3493"
-    },
-    {
-        "title": "Marriage",
-        "text": "Time",
-        "note_id": "412d"
     }
 ]
