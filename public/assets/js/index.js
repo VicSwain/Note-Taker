@@ -56,7 +56,7 @@ const deleteNote = (id) =>
 const renderActiveNote = () => {
   hide(saveNoteBtn);
   hide(clearBtn);
-
+  console.log(activeNote.note_id);
   if (activeNote.note_id) {
     show(newNoteBtn);
     noteTitle.setAttribute('readonly', true);
@@ -98,8 +98,10 @@ const handleNoteDelete = (e) => {
   }
 
   deleteNote(activeNote.note_id).then(() => {
+    activeNote = {};
     getAndRenderNotes();
-    renderActiveNote();
+    renderActiveNote(); // keep in mind for debug
+    
   });
 };
 
